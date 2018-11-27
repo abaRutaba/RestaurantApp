@@ -1,0 +1,170 @@
+/* Empty. Add your own CSS if you like */
+
+.parallax 
+{
+    /* Full height */
+    height:100%; 
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.parallax1
+{
+    /* Full height */
+    height:100%; 
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.center {
+    padding-left: 10%;
+    position: relative;
+    top:5%;
+    margin: 25px;
+    width: 80%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.center2 {
+    padding-left: 10%;
+    position: absolute;
+    top:10%;
+    margin: 25px;
+    width: 80%;
+    font-size: 18px;
+    text-align: center;
+}
+input::placeholder {
+  color: #fff;
+}
+.box
+{
+  
+  height:100%;
+  width:100%;
+  font-family:Helvetica;
+  color:#fff;
+  background:rgba(0,0,0,0.3);
+  
+}
+
+
+	#btn1:hover
+	{
+		background:none;
+		transition:1s;
+	}
+  .specialdiv
+  {
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+.special
+{
+  width: 100%;
+  
+}
+.avatar
+{
+  border-radius: 50%;
+}
+.text-block {
+    position: absolute;
+    bottom: 30%;
+    padding: 0.1%;
+    background-color: black;
+    color: white;
+    opacity: 0.6;
+    width: 100%;
+    
+}
+.text-block1 {
+    position: absolute;
+    bottom: 0%;
+    padding: 0.1%;
+    background-color: black;
+    color: white;
+    opacity: 0.6;
+    width: 100%;
+    
+}
+.slider-pager {
+	bottom: 20%;
+   
+}
+
+.slider-pager-page.active
+{
+color: white;
+}
+.mag
+{
+  
+  font-size: 65%;
+}
+.group {
+  display: inline-block;
+}
+.lft
+{
+  float: left;
+}
+
+.btn
+{
+  width: 32%;
+}
+.circle {
+        border-radius: 100%;     
+        background-color: grey;
+        display:inline-block;
+        line-height:100px;
+        width: 20%;
+        color: white;
+    }
+    .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding-bottom:5%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 4px;
+}
+
+
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}

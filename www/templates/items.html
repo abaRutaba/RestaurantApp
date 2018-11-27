@@ -1,0 +1,39 @@
+<ion-view view-title="items"  ng-controller="itemCtrl">
+
+  <ion-content>
+    <ion-list>
+        <div ng-repeat="group in groups">
+
+          <ion-item class="item-stable item-thumbnail-right"
+
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+             {{group.name}}
+             <div class="row">
+                <button class="button icon ion-minus-circled" ng-click="sub(quantity)"> &nbsp;&nbsp;&nbsp;
+                 {{group.quantity}}
+                <button class="button icon ion-plus-circled" ng-click="add(quantity)">
+            </div>            
+            <p>Price = {{group.price}}$</p>
+             <img ng-src="{{group.img}}" style="height: 70px; position: relative; bottom:100px; float: right;">
+
+             <div class="button-bar">
+             <button class="button button-assertive icon ion-android-cart msg" ng-click="showConfirm()" ></button> 
+             <button class="button icon ion-android-delete" ></button>
+             <button class="button button-stable icon ion-star mag" > ADD TO FAVORITE</button>
+             </div>
+
+          </ion-item>
+
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            <ion-checkbox class="checkbox-assertive item-checkbox-right">{{item}}</ion-checkbox>
+          </ion-item>
+        </div>
+      </ion-list>
+  </ion-content>
+</ion-view>

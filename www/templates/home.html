@@ -1,0 +1,162 @@
+<ion-view view-title="Home">
+  <ion-content>
+<!-- ***********************************************-->
+<div ng-controller="homeCtrl">
+  <div ng-repeat="m in menu">
+    <div class="row item">
+    
+    <div class="col"><h3>{{m.name}}</h3>
+      <select class="item item-select item-assertive" ng-repeat="item in m.items">
+        <option>{{item.itemName}} &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{item.price}}</option>
+     </select>
+    </div>
+
+    <div class="col" style="padding-left: 4%"><h3>Quantity</h3>
+      <button class="button icon ion-minus-circled" ng-click="sub(quantity)"> &nbsp;&nbsp; &nbsp; 1
+      <button class="button icon ion-plus-circled" ng-click="add(quantity)" style="width: 50%">
+    </div>
+
+    <div class="col">
+      <h3>Add To Cart</h3>
+      <button class="button button-assertive icon ion-android-cart msg" style="width: 100%"></button>
+    </div>
+
+  </div>
+  </div>
+</div>
+  <!-- ***********************************************-->
+ <!-- <div class="row item">
+    
+    <div class="col"><h3>SEA FOOD</h3>
+      <select class="item item-select item-assertive">
+        <option>ABC &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100RS</option>
+        <option>XYZ &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150RS</option>
+        <option>IJK &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130RS</option>
+      </select>
+    </div>
+
+    <div class="col" style="padding-left: 4%"><h3>Quantity</h3>
+      <button class="button icon ion-minus-circled" ng-click="sub(quantity)"> &nbsp;&nbsp; &nbsp; 1
+      <button class="button icon ion-plus-circled" ng-click="add(quantity)" style="width: 50%">
+    </div>
+
+    <div class="col">
+      <h3>Add To Cart</h3>
+      <button class="button button-assertive icon ion-android-cart msg" style="width: 100%"></button>
+    </div>
+
+  </div>
+<!-- ***********************************************-->
+
+ <!--<div class="row item">
+    
+    <div class="col"><h3>STEAK</h3>
+      <select class="item item-select item-assertive">
+        <option>ABC &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100RS</option>
+        <option>XYZ &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150RS</option>
+        <option>IJK &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130RS</option>
+      </select>
+    </div>
+
+    <div class="col" style="padding-left: 4%"><h3>Quantity</h3>
+      <button class="button icon ion-minus-circled" ng-click="sub(quantity)"> &nbsp;&nbsp; &nbsp; 1
+      <button class="button icon ion-plus-circled" ng-click="add(quantity)" style="width: 50%">
+    </div>
+
+    <div class="col">
+      <h3>Add To Cart</h3>
+      <button class="button button-assertive icon ion-android-cart msg" style="width: 100%"></button>
+    </div>
+
+  </div>
+<!-- ***********************************************-->
+   <!--<div class="row item">
+    
+    <div class="col"><h3>KARAHI</h3>
+      <select class="item item-select item-assertive">
+        <option>ABC &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100RS</option>
+        <option>XYZ &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150RS</option>
+        <option>IJK &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130RS</option>
+      </select>
+    </div>
+
+    <div class="col" style="padding-left: 4%"><h3>Quantity</h3>
+      <button class="button icon ion-minus-circled" ng-click="sub(quantity)"> &nbsp;&nbsp; &nbsp; 1
+      <button class="button icon ion-plus-circled" ng-click="add(quantity)" style="width: 50%">
+    </div>
+
+    <div class="col">
+      <h3>Add To Cart</h3>
+      <button class="button button-assertive icon ion-android-cart msg" style="width: 100%"></button>
+    </div>
+
+  </div>
+<!-- ***********************************************-->
+ <!--<div class="row item">
+    
+    <div class="col"><h3>CHINEESE</h3>
+      <select class="item item-select item-assertive">
+        <option>ABC &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100RS</option>
+        <option>XYZ &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150RS</option>
+        <option>IJK &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130RS</option>
+      </select>
+    </div>
+
+    <div class="col" style="padding-left: 4%"><h3>Quantity</h3>
+      <button class="button icon ion-minus-circled" ng-click="sub(quantity)"> &nbsp;&nbsp; &nbsp; 1
+      <button class="button icon ion-plus-circled" ng-click="add(quantity)" style="width: 50%">
+    </div>
+
+    <div class="col">
+      <h3>Add To Cart</h3>
+      <button class="button button-assertive icon ion-android-cart msg" style="width: 100%"></button>
+    </div>
+
+  </div>
+<!-- ***********************************************-->
+ <!--<div class="row item">
+    
+    <div class="col"><h3>BBQ</h3>
+      <select class="item item-select item-assertive">
+        <option>ABC &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100RS</option>
+        <option>XYZ &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150RS</option>
+        <option>IJK &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130RS</option>
+      </select>
+    </div>
+
+    <div class="col" style="padding-left: 4%"><h3>Quantity</h3>
+      <button class="button icon ion-minus-circled" ng-click="sub(quantity)"> &nbsp;&nbsp; &nbsp; 1
+      <button class="button icon ion-plus-circled" ng-click="add(quantity)" style="width: 50%">
+    </div>
+
+    <div class="col">
+      <h3>Add To Cart</h3>
+      <button class="button button-assertive icon ion-android-cart msg" style="width: 100%"></button>
+    </div>
+
+  </div>
+<!-- ***********************************************-->
+ <!--<div class="row item">
+    
+    <div class="col"><h3>BEVERAGES</h3>
+      <select class="item item-select item-assertive">
+        <option>ABC &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100RS</option>
+        <option>XYZ &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150RS</option>
+        <option>IJK &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130RS</option>
+      </select>
+    </div>
+
+    <div class="col" style="padding-left: 4%"><h3>Quantity</h3>
+      <button class="button icon ion-minus-circled" ng-click="sub(quantity)"> &nbsp;&nbsp; &nbsp; 1
+      <button class="button icon ion-plus-circled" ng-click="add(quantity)" style="width: 50%">
+    </div>
+
+    <div class="col">
+      <h3>Add To Cart</h3>
+      <button class="button button-assertive icon ion-android-cart msg" style="width: 100%"></button>
+    </div>
+
+  </div>
+<!-- ***********************************************-->
+  </ion-content>
+</ion-view>
